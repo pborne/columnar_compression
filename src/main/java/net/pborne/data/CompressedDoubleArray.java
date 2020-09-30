@@ -2,41 +2,41 @@ package net.pborne.data;
 
 public class CompressedDoubleArray {
 
-	public enum WIDTH {
-	    THIRTY_TWO,
-	    SIXTY_FOUR
-	}
-	
-	public final int uncompressedArrayLength;
+  public enum WIDTH {
+    THIRTY_TWO,
+    SIXTY_FOUR
+  }
 
-	public final byte[] compressedSigns;
-	public final byte[] compressedExponents;
-	public final byte[] compressedSignificands;
+  public final int uncompressedArrayLength;
 
-	public final CompressionAlgorithms signsAlgorithm;
-	public final CompressionAlgorithms exponentsAlgorithm;
-	public final CompressionAlgorithms significandsAlgorithm;
+  public final byte[] compressedSigns;
+  public final byte[] compressedExponents;
+  public final byte[] compressedSignificands;
 
-	public final WIDTH width;
-	
-	public CompressedDoubleArray(byte[] compressedSigns,
-                                 byte[] compressedExponents,
-                                 byte[] compressedSignificands,
-                                 CompressionAlgorithms signsAlgorithm,
-                                 CompressionAlgorithms exponentsAlgorithm,
-                                 CompressionAlgorithms significandsAlgorithm,
-                                 int uncompressedArrayLength,
-                                 WIDTH width) {
+  public final CompressionAlgorithms signsAlgorithm;
+  public final CompressionAlgorithms exponentsAlgorithm;
+  public final CompressionAlgorithms significandsAlgorithm;
 
-		this.compressedSigns         = compressedSigns;
-		this.compressedExponents     = compressedExponents;
-		this.compressedSignificands  = compressedSignificands;
+  public final WIDTH width;
 
-		this.signsAlgorithm          = signsAlgorithm;
-		this.exponentsAlgorithm      = exponentsAlgorithm;
-		this.significandsAlgorithm   = significandsAlgorithm;
+  public CompressedDoubleArray(byte[] compressedSigns,
+                               byte[] compressedExponents,
+                               byte[] compressedSignificands,
+                               CompressionAlgorithms signsAlgorithm,
+                               CompressionAlgorithms exponentsAlgorithm,
+                               CompressionAlgorithms significandsAlgorithm,
+                               int uncompressedArrayLength,
+                               WIDTH width) {
 
-		this.uncompressedArrayLength = uncompressedArrayLength;
-		this.width                   = width;
-	}
+    this.compressedSigns = compressedSigns;
+    this.compressedExponents = compressedExponents;
+    this.compressedSignificands = compressedSignificands;
+
+    this.signsAlgorithm = signsAlgorithm;
+    this.exponentsAlgorithm = exponentsAlgorithm;
+    this.significandsAlgorithm = significandsAlgorithm;
+
+    this.uncompressedArrayLength = uncompressedArrayLength;
+    this.width = width;
+  }
 }
